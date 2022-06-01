@@ -1,0 +1,184 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body1 {
+  background-image: url(./images/mojave_dynamic_4.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body2 {
+  background-image: url(./images/mojave_dynamic_10.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: lightgray;
+}
+
+.body3 {
+  background-image: url(./images/mojave_dynamic_13.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: lightgray;
+}
+
+.splash {
+  display: none;
+}
+
+.splash-active {
+  width: 100%;
+  max-width: 560px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.splash-active div {
+  text-align: center;
+}
+.splash-active .container {
+  border-radius: 16px;
+  background-color: rgba(226, 226, 226, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin-left: 3vw;
+  margin-right: 3vw;
+  padding-bottom: 1vh;
+}
+.splash-active #clock {
+  font-size: 3.75rem;
+}
+.splash-active #nameInput {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 1.5rem;
+  text-align: center;
+  background: none;
+}
+.splash-active #nameInput:focus {
+  outline: none;
+  background: none;
+}
+.splash-active span {
+  font-size: 1.5rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  gap: 3vh;
+}
+
+#greeter {
+  flex: 1.5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 95vw;
+  border-radius: 16px;
+  background-color: rgba(226, 226, 226, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin-top: 2vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  padding-bottom: 1vh;
+}
+#greeter #greeting {
+  font-size: 1.5rem;
+  margin-bottom: 0.5vh;
+}
+#greeter #clock2 {
+  font-size: 3.75rem;
+}
+#greeter #quote {
+  text-align: justify;
+  margin: 1vw;
+}
+#greeter #newQuote {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 16px;
+  background-color: rgba(226, 226, 226, 0.4);
+}
+#greeter #addQuoteWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#greeter #quoteInput {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 1rem;
+  text-align: center;
+  background: none;
+  width: 80%;
+}
+#greeter #quoteInput:focus {
+  outline: none;
+  background: none;
+}
+#greeter #author {
+  text-align: left;
+}
+
+.to-do {
+  flex: 1;
+  width: 95vw;
+  border-radius: 16px;
+  background-color: rgba(226, 226, 226, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin-left: 3vw;
+  margin-right: 3vw;
+  padding-bottom: 1vh;
+}
+
+.focusWrapper {
+  flex: 0.5;
+  border-radius: 16px;
+  background-color: rgba(226, 226, 226, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin-left: 3vw;
+  margin-right: 3vw;
+  padding-bottom: 1vh;
+  margin-bottom: 2vh;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */

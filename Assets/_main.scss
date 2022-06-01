@@ -1,0 +1,89 @@
+.main {
+  @include flex(flex, center, center);
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  gap: 3vh;
+}
+
+#greeter {
+  flex: 1.5;
+  @include flex(flex, space-around);
+  flex-direction: column;
+  width: 95vw;
+  border-radius: 16px;
+  background-color: rgba($color: #e2e2e2, $alpha: 0.1);
+  backdrop-filter: blur(10px);
+  margin-top: 2vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  padding-bottom: 1vh;
+
+  #greeting {
+    font-size: 1.5rem;
+    margin-bottom: 0.5vh;
+  }
+  #clock2 {
+    font-size: 3.75rem;
+  }
+
+  #quote {
+    text-align: justify;
+    margin: 1vw;
+  }
+
+  #newQuote {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 16px;
+    background-color: rgba($color: #e2e2e2, $alpha: 0.4);
+  }
+
+  #addQuoteWrapper {
+    @include flex();
+    width: 100%;
+  }
+
+  #quoteInput {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 1rem;
+    text-align: center;
+    background: none;
+    width: 80%;
+  }
+
+  #quoteInput:focus {
+    outline: none;
+    background: none;
+  }
+
+  #author {
+    text-align: left;
+  }
+}
+
+.to-do {
+  flex: 1;
+  width: 95vw;
+  border-radius: 16px;
+  background-color: rgba($color: #e2e2e2, $alpha: 0.1);
+  backdrop-filter: blur(10px);
+  margin-left: 3vw;
+  margin-right: 3vw;
+  padding-bottom: 1vh;
+}
+
+.focusWrapper {
+  flex: 0.5;
+  border-radius: 16px;
+  background-color: rgba($color: #e2e2e2, $alpha: 0.1);
+  backdrop-filter: blur(10px);
+  margin-left: 3vw;
+  margin-right: 3vw;
+  padding-bottom: 1vh;
+  margin-bottom: 2vh;
+}

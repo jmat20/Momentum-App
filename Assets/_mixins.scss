@@ -1,0 +1,13 @@
+@mixin background($imgpath, $position: 0 0, $repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    repeat: $repeat;
+  }
+}
+
+@mixin flex($flex: flex, $x: center, $y: center) {
+  display: $flex;
+  justify-content: $x;
+  align-items: $y;
+}

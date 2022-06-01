@@ -1,0 +1,44 @@
+.splash-active {
+  width: 100%;
+  max-width: 560px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  div {
+    text-align: center;
+  }
+
+  .container {
+    border-radius: 16px;
+    background-color: rgba($color: #e2e2e2, $alpha: 0.1);
+    backdrop-filter: blur(10px);
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding-bottom: 1vh;
+  }
+
+  #clock {
+    font-size: 3.75rem;
+  }
+
+  #nameInput {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 1.5rem;
+    text-align: center;
+    background: none;
+  }
+
+  #nameInput:focus {
+    outline: none;
+    background: none;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+}

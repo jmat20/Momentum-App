@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script type="text/javascript" src="./script.js" async></script>
+  </head>
+  <body>
+    <div class="splash-active">
+      <div class="container">
+        <div id="clock"></div>
+        <div id="setup">
+          <span>Hi, my name is</span>
+          <input type="text" id="nameInput" placeholder="..." />
+          <span id="addName">+</span>
+        </div>
+      </div>
+    </div>
+    <div class="main hidden">
+      <!-- Greeter -->
+      <div id="greeter">
+        <div id="clock2"></div>
+        <div id="greeting"></div>
+        <p id="quote"></p>
+        <h4 id="author"></h4>
+        <p id="newQuote">Get New Quote</p>
+        <div id="addQuoteWrapper">
+          <input
+            class="hidden"
+            type="text"
+            id="quoteInput"
+            placeholder="add a custom quote..."
+          />
+          <span id="addQuote">+</span>
+        </div>
+      </div>
+      <!-- Greeter end -->
+      <!-- To-do start -->
+      <div class="to-do">
+        <h3>To-Do</h3>
+        <div id="container">
+          <div id="inputContainer">
+            <input type="text" id="toDoInput" placeholder="Describe To Do..." />
+            <div id="addButton"><span>ADD</span></div>
+          </div>
+          <div id="toDoContainer"></div>
+        </div>
+      </div>
+      <!-- To-do end -->
+      <!-- Focus Start -->
+      <div class="focusWrapper">
+        <h2 id="focus">Goal For Today</h2>
+        <input
+          class="hidden"
+          type="text"
+          id="focusInput"
+          placeholder="add your focus..."
+        />
+        <span id="addFocus">+</span>
+        <div id="reFocus">X</div>
+      </div>
+      <!-- focus end -->
+    </div>
+  </body>
+</html>
