@@ -7,31 +7,7 @@ body {
   @include flex();
 }
 
-.body1 {
-  background-image: url(./images/mojave_dynamic_4.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.body2 {
-  background-image: url(./images/mojave_dynamic_10.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: lightgray;
-}
-
-.body3 {
-  background-image: url(./images/mojave_dynamic_13.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: lightgray;
-}
+@import "backgrounds";
 
 .splash {
   display: none;

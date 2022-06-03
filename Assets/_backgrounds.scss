@@ -1,0 +1,70 @@
+.body3am {
+  @include background(url(./images/mojave3am.jpeg));
+  color: lightgray;
+}
+
+.body5am {
+  @include background(url(./images/mojave5am.jpeg));
+  color: lightgray;
+}
+
+.body6am {
+  @include background(url(./images/mojave6am.jpeg));
+  color: lightgray;
+}
+
+.body7am {
+  @include background(url(./images/mojave7am.jpeg));
+}
+
+.body8am {
+  @include background(url(./images/mojave8am.jpeg));
+}
+
+.body10am {
+  @include background(url(./images/mojave10am.jpeg));
+}
+
+.body11am {
+  @include background(url(./images/mojave11am.jpeg));
+}
+
+.body12nn {
+  @include background(url(./images/mojave12nn.jpeg));
+}
+
+.body1pm {
+  @include background(url(./images/mojave1pm.jpeg));
+}
+
+.body3pm {
+  @include background(url(./images/mojave3pm.jpeg));
+}
+
+.body4pm {
+  @include background(url(./images/mojave4pm.jpeg));
+}
+
+.body5pm {
+  @include background(url(./images/mojave5pm.jpeg));
+}
+
+.body6pm {
+  @include background(url(./images/mojave6pm.jpeg));
+  color: lightgray;
+}
+
+.body7pm {
+  @include background(url(./images/mojave7pm.jpeg));
+  color: lightgray;
+}
+
+.body10pm {
+  @include background(url(./images/mojave10pm.jpeg));
+  color: lightgray;
+}
+
+.body12mn {
+  @include background(url(./images/mojave12mn.jpeg));
+  color: lightgray;
+}

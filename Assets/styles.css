@@ -17,16 +17,8 @@ body {
   align-items: center;
 }
 
-.body1 {
-  background-image: url(./images/mojave_dynamic_4.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.body2 {
-  background-image: url(./images/mojave_dynamic_10.jpeg);
+.body3am {
+  background-image: url(./images/mojave3am.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -34,8 +26,125 @@ body {
   color: lightgray;
 }
 
-.body3 {
-  background-image: url(./images/mojave_dynamic_13.jpeg);
+.body5am {
+  background-image: url(./images/mojave5am.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: lightgray;
+}
+
+.body6am {
+  background-image: url(./images/mojave6am.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: lightgray;
+}
+
+.body7am {
+  background-image: url(./images/mojave7am.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body8am {
+  background-image: url(./images/mojave8am.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body10am {
+  background-image: url(./images/mojave10am.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body11am {
+  background-image: url(./images/mojave11am.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body12nn {
+  background-image: url(./images/mojave12nn.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body1pm {
+  background-image: url(./images/mojave1pm.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body3pm {
+  background-image: url(./images/mojave3pm.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body4pm {
+  background-image: url(./images/mojave4pm.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body5pm {
+  background-image: url(./images/mojave5pm.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body6pm {
+  background-image: url(./images/mojave6pm.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: lightgray;
+}
+
+.body7pm {
+  background-image: url(./images/mojave7pm.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: lightgray;
+}
+
+.body10pm {
+  background-image: url(./images/mojave10pm.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: lightgray;
+}
+
+.body12mn {
+  background-image: url(./images/mojave12mn.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -72,12 +181,15 @@ body {
   font-size: 3.75rem;
 }
 .splash-active #nameInput {
+  width: 75%;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
   font-size: 1.5rem;
   text-align: center;
   background: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: lightgrey;
 }
 .splash-active #nameInput:focus {
   outline: none;
@@ -94,9 +206,20 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  gap: 3vh;
+  gap: 2vh;
+  max-height: 100vh;
 }
 
+@media screen and (min-width: 601px) {
+  .main {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: "to-do greeter" "to-do focus";
+    place-items: stretch;
+    padding: 2.5vw;
+  }
+}
 #greeter {
   flex: 1.5;
   display: flex;
@@ -122,7 +245,12 @@ body {
 }
 #greeter #quote {
   text-align: justify;
-  margin: 1vw;
+  margin: 1.5vw;
+  width: 90%;
+}
+#greeter #author {
+  text-align: left;
+  width: 90%;
 }
 #greeter #newQuote {
   padding-left: 8px;
@@ -146,17 +274,32 @@ body {
   text-align: center;
   background: none;
   width: 80%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: lightgrey;
+  overflow: scroll;
 }
 #greeter #quoteInput:focus {
   outline: none;
   background: none;
 }
-#greeter #author {
-  text-align: left;
-}
 
+@media screen and (min-width: 601px) {
+  #greeter {
+    grid-area: greeter;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
 .to-do {
   flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vh;
   width: 95vw;
   border-radius: 16px;
   background-color: rgba(226, 226, 226, 0.1);
@@ -166,9 +309,89 @@ body {
   margin-right: 3vw;
   padding-bottom: 1vh;
 }
+.to-do h2 {
+  flex: 1;
+}
+.to-do div {
+  width: 100%;
+}
+.to-do #container {
+  flex: 9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+.to-do #inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.to-do #toDoContainer {
+  max-height: 20vh;
+  overflow: auto;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.to-do #toDoInput {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 1rem;
+  text-align: center;
+  background: none;
+  width: 70%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: lightgrey;
+  overflow: scroll;
+}
+.to-do .toDoShell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.to-do #toDoInput:focus {
+  outline: none;
+  background: none;
+}
+.to-do #addButton {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 16px;
+  background-color: rgba(226, 226, 226, 0.4);
+}
 
+@media screen and (min-width: 601px) {
+  .to-do {
+    grid-area: to-do;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .to-do #toDoContainer {
+    max-height: 75vh;
+  }
+}
 .focusWrapper {
   flex: 0.5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
   border-radius: 16px;
   background-color: rgba(226, 226, 226, 0.1);
   -webkit-backdrop-filter: blur(10px);
@@ -177,8 +400,50 @@ body {
   margin-right: 3vw;
   padding-bottom: 1vh;
   margin-bottom: 2vh;
+  width: 95vw;
+}
+.focusWrapper #focusInner1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.focusWrapper #focusInner2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20vw;
+}
+.focusWrapper #focusInput {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 1rem;
+  text-align: center;
+  background: none;
+  width: 70%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: lightgrey;
+  overflow: scroll;
+}
+.focusWrapper #focusInput:focus {
+  outline: none;
+  background: none;
 }
 
+@media screen and (min-width: 601px) {
+  .focusWrapper {
+    grid-area: focus;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .focusWrapper h2 {
+    font-size: 300%;
+  }
+}
 .hidden {
   display: none;
 }/*# sourceMappingURL=styles.css.map */

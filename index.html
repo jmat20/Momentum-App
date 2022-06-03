@@ -40,11 +40,11 @@
       <!-- Greeter end -->
       <!-- To-do start -->
       <div class="to-do">
-        <h3>To-Do</h3>
+        <h2>To-Do</h2>
         <div id="container">
           <div id="inputContainer">
             <input type="text" id="toDoInput" placeholder="Describe To Do..." />
-            <div id="addButton"><span>ADD</span></div>
+            <p id="addButton">ADD</p>
           </div>
           <div id="toDoContainer"></div>
         </div>
@@ -53,14 +53,17 @@
       <!-- Focus Start -->
       <div class="focusWrapper">
         <h2 id="focus">Goal For Today</h2>
-        <input
-          class="hidden"
-          type="text"
-          id="focusInput"
-          placeholder="add your focus..."
-        />
-        <span id="addFocus">+</span>
-        <div id="reFocus">X</div>
+        <div id="focusInner1">
+          <input
+            class="hidden"
+            type="text"
+            id="focusInput"
+            placeholder="add your focus..."
+          />
+          <div id="focusInner2">
+            <span id="addFocus">+</span> <span id="reFocus">X</span>
+          </div>
+        </div>
       </div>
       <!-- focus end -->
     </div>

@@ -1,8 +1,16 @@
-@mixin background($imgpath, $position: 0 0, $repeat: no-repeat) {
+@mixin background(
+  $imgpath,
+  $repeat: no-repeat,
+  $size: cover,
+  $position: center,
+  $attachment: fixed
+) {
   background: {
-    image: url($imgpath);
-    position: $position;
+    image: $imgpath;
     repeat: $repeat;
+    size: $size;
+    position: $position;
+    attachment: $attachment;
   }
 }
 

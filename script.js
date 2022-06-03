@@ -7,6 +7,8 @@ let userName = "";
 let wallTime = "";
 let splash = document.querySelector(".splash-active");
 let main = document.querySelector(".main");
+let hh;
+let body = document.querySelector("body");
 
 class ToDo {
   constructor(string) {
@@ -73,7 +75,7 @@ function completeToDo(event) {
 
 function currentTime() {
   let date = new Date();
-  var hh = date.getHours();
+  hh = date.getHours();
   let mm = date.getMinutes();
   let ss = date.getSeconds();
   if (hh == 0) {
@@ -198,20 +200,56 @@ document.getElementById("reFocus").addEventListener("click", function () {
 });
 
 function wallpaperSetter() {
-  let body = document.querySelector("body");
-  if (wallTime === "morning") {
-    body.classList.add("body1");
-    body.classList.remove("body2");
-    body.classList.remove("body3");
-  } else if (wallTime === "afternoon") {
-    body.classList.remove("body1");
-    body.classList.add("body2");
-    body.classList.remove("body3");
-  } else if (wallTime === "evening") {
-    body.classList.remove("body1");
-    body.classList.remove("body2");
-    body.classList.add("body3");
+  if (hh <= 3 && session === "AM") {
+    body.removeAttribute("class");
+    body.classList.add("body3am");
+  } else if (hh <= 5 && session === "AM") {
+    body.removeAttribute("class");
+    body.classList.add("body5am");
+  } else if (hh <= 6 && session === "AM") {
+    body.removeAttribute("class");
+    body.classList.add("body6am");
+  } else if (hh <= 7 && session === "AM") {
+    body.removeAttribute("class");
+    body.classList.add("body7am");
+  } else if (hh <= 8 && session === "AM") {
+    body.removeAttribute("class");
+    body.classList.add("body8am");
+  } else if (hh <= 10 && session === "AM") {
+    body.removeAttribute("class");
+    body.classList.add("body10am");
+  } else if (hh <= 11 && session === "AM") {
+    body.removeAttribute("class");
+    body.classList.add("body11am");
+  } else if (hh <= 12 && session === "PM") {
+    body.removeAttribute("class");
+    body.classList.add("body12nn");
+  } else if (hh <= 1 && session === "PM") {
+    body.removeAttribute("class");
+    body.classList.add("body1pm");
+  } else if (hh <= 3 && session === "PM") {
+    body.removeAttribute("class");
+    body.classList.add("body3pm");
+  } else if (hh <= 4 && session === "PM") {
+    body.removeAttribute("class");
+    body.classList.add("body4pm");
+  } else if (hh <= 5 && session === "PM") {
+    body.removeAttribute("class");
+    body.classList.add("body5pm");
+  } else if (hh <= 6 && session === "PM") {
+    body.removeAttribute("class");
+    body.classList.add("body6pm");
+  } else if (hh <= 7 && session === "PM") {
+    body.removeAttribute("class");
+    body.classList.add("body7pm");
+  } else if (hh <= 10 && session === "PM") {
+    body.removeAttribute("class");
+    body.classList.add("body10pm");
+  } else if (hh <= 12 && session === "AM") {
+    body.removeAttribute("class");
+    body.classList.add("body12mn");
   }
+
   let t = setTimeout(function () {
     wallpaperSetter();
   }, 1800000);

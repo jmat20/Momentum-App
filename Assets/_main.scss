@@ -1,9 +1,23 @@
 .main {
-  @include flex(flex, center, center);
+  @include flex();
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  gap: 3vh;
+  gap: 2vh;
+  max-height: 100vh;
+}
+
+@media screen and (min-width: 601px) {
+  .main {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas:
+      "to-do greeter"
+      "to-do focus";
+    place-items: stretch;
+    padding: 2.5vw;
+  }
 }
 
 #greeter {
@@ -29,7 +43,13 @@
 
   #quote {
     text-align: justify;
-    margin: 1vw;
+    margin: 1.5vw;
+    width: 90%;
+  }
+
+  #author {
+    text-align: left;
+    width: 90%;
   }
 
   #newQuote {
@@ -54,20 +74,34 @@
     text-align: center;
     background: none;
     width: 80%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: lightgrey;
+    overflow: scroll;
   }
 
   #quoteInput:focus {
     outline: none;
     background: none;
   }
+}
 
-  #author {
-    text-align: left;
+@media screen and (min-width: 601px) {
+  #greeter {
+    grid-area: greeter;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .to-do {
   flex: 1;
+  @include flex(flex, space-between);
+  flex-direction: column;
+  gap: 2vh;
   width: 95vw;
   border-radius: 16px;
   background-color: rgba($color: #e2e2e2, $alpha: 0.1);
@@ -75,10 +109,92 @@
   margin-left: 3vw;
   margin-right: 3vw;
   padding-bottom: 1vh;
+
+  h2 {
+    flex: 1;
+  }
+
+  div {
+    width: 100%;
+  }
+
+  #container {
+    flex: 9;
+    @include flex(flex, flex-start);
+    flex-direction: column;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+  }
+
+  #inputContainer {
+    @include flex();
+    margin-bottom: 10px;
+  }
+  #toDoContainer {
+    max-height: 20vh;
+    overflow: auto;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include flex(flex, flex-start);
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #toDoInput {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 1rem;
+    text-align: center;
+    background: none;
+    width: 70%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: lightgrey;
+    overflow: scroll;
+  }
+
+  .toDoShell {
+    @include flex();
+    justify-content: space-between;
+  }
+
+  #toDoInput:focus {
+    outline: none;
+    background: none;
+  }
+
+  #addButton {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 16px;
+    background-color: rgba($color: #e2e2e2, $alpha: 0.4);
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .to-do {
+    grid-area: to-do;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    #toDoContainer {
+      max-height: 75vh;
+    }
+  }
 }
 
 .focusWrapper {
   flex: 0.5;
+  @include flex(flex, space-around);
+  flex-direction: column;
   border-radius: 16px;
   background-color: rgba($color: #e2e2e2, $alpha: 0.1);
   backdrop-filter: blur(10px);
@@ -86,4 +202,49 @@
   margin-right: 3vw;
   padding-bottom: 1vh;
   margin-bottom: 2vh;
+  width: 95vw;
+
+  #focusInner1 {
+    @include flex();
+    flex-direction: column;
+  }
+
+  #focusInner2 {
+    @include flex(flex, space-around);
+    width: 20vw;
+  }
+
+  #focusInput {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 1rem;
+    text-align: center;
+    background: none;
+    width: 70%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: lightgrey;
+    overflow: scroll;
+  }
+
+  #focusInput:focus {
+    outline: none;
+    background: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .focusWrapper {
+    grid-area: focus;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    h2 {
+      font-size: 300%;
+    }
+  }
 }

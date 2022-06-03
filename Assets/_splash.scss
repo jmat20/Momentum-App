@@ -25,12 +25,16 @@
   }
 
   #nameInput {
+    width: 75%;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
     font-size: 1.5rem;
     text-align: center;
     background: none;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: lightgrey;
   }
 
   #nameInput:focus {
